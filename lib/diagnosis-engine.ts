@@ -137,7 +137,7 @@ function generateAdvice(input: DiagnosisInput, level: SunlightLevel): string {
  */
 export function diagnose(input: DiagnosisInput): DiagnosisResult {
   // 1. 方角による基礎スコア
-  let score = DIRECTION_SCORES[input.direction];
+  let score: number = DIRECTION_SCORES[input.direction];
 
   // 2. 窓のサイズによる補正
   score *= WINDOW_SIZE_MULTIPLIERS[input.windowSize];
